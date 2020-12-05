@@ -21,7 +21,7 @@
 
                  <div class="form-group">
                      <label for="precio">Precio</label>
-                    <input type="number" name="precio" id="precio">
+                    <input type="number" name="precio" id="precio" class="form-control">
                  </div>
 
                  <div class="form-group">
@@ -35,7 +35,7 @@
                  </div>
 
                  <div class="form-group">
-                    <label for="descipcion">Descripci&oacute;</label>
+                    <label for="descipcion">Descripci&oacute;n</label>
                     <textarea name="descipcion" id="descipcion" class="form-control" rows="3"></textarea>
                  </div>
 

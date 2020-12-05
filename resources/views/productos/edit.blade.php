@@ -10,33 +10,42 @@
           </div>
           <div class="card-body" style="padding:30px">
 
-             <form action="{{ url('/productos/create') }}" method="POST">
+             <form action="{{ url('/productos/edit') }}" method="POST">
                 {{method_field('PUT')}}
+
                  @csrf
+
+                 <input type="hidden" name="id" id="id"
+                 value="{{ $producto->id}}">
 
                  <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="form-control">
+                    <input type="text" name="nombre" id="nombre"
+                    value="{{$producto->nombre}}" class="form-control">
                  </div>
 
                  <div class="form-group">
                      <label for="precio">Precio</label>
-                    <input type="number" name="precio" id="precio">
+                    <input type="number" name="precio" id="precio"
+                    value="{{$producto->precio}}" class="form-control">
                  </div>
 
                  <div class="form-group">
                      <label for="categoria">Categor&iacute;a</label>
-                    <input type="text" name="categoria" id="categoria" class="form-control">
+                    <input type="text" name="categoria" id="categoria"
+                    value="{{$producto->categoria}}" class="form-control">
                  </div>
 
                  <div class="form-group">
                      <label for="imagen">Imagen</label>
-                    <input type="text" name="imagen" id="imagen" class="form-control">
+                    <input type="text" name="imagen" id="imagen"
+                    value="{{$producto->imagen}}" class="form-control">
                  </div>
 
                  <div class="form-group">
-                    <label for="descipcion">Descripci&oacute;</label>
-                    <textarea name="descipcion" id="descipcion" class="form-control" rows="3"></textarea>
+                    <label for="descipcion">Descripci&oacute;n</label>
+                    <textarea name="descipcion" id="descipcion"
+                    value="{{$producto->descripcion}}"class="form-control" rows="3"></textarea>
                  </div>
 
                  <div class="form-group text-center">
