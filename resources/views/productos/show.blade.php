@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -29,7 +29,7 @@
 	        <a class="btn btn-danger" href="#">Pendiente de compra</a>
         @endif
 
-        <a class="btn btn-warning" href="{{ url('/productos/edit/' . $producto->id  ) }}">
+        <a class="btn btn-warning" href="{{ url('productos/edit/' . $producto->id) }}">
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
             Editar producto</a>
         <a class="btn btn-outline-info" href="{{ action('App\Http\Controllers\ProductoController@getIndex') }}">Volver al listado</a>

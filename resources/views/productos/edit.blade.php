@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -10,13 +10,12 @@
           </div>
           <div class="card-body" style="padding:30px">
 
-             <form action="{{ url('/productos/edit') }}" method="POST">
+             <form action="{{ url('/productos/edit/' . $producto->id ) }}" method="POST">
                 {{method_field('PUT')}}
 
                  @csrf
 
-                 <input type="hidden" name="id" id="id"
-                 value="{{ $producto->id}}">
+                 <input type="hidden" name="id" id="id" value="{{ $producto->id}}">
 
                  <div class="form-group">
                     <label for="nombre">Nombre</label>
@@ -43,9 +42,9 @@
                  </div>
 
                  <div class="form-group">
-                    <label for="descipcion">Descripci&oacute;n</label>
-                    <textarea name="descipcion" id="descipcion"
-                    value="{{$producto->descripcion}}"class="form-control" rows="3"></textarea>
+                    <label for="descripcion">Descripci&oacute;n</label>
+                    <textarea name="descripcion" id="descripcion"
+                    class="form-control" rows="3">{{$producto->descripcion}}</textarea>
                  </div>
 
                  <div class="form-group text-center">

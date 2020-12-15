@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -35,8 +35,8 @@
                  </div>
 
                  <div class="form-group">
-                    <label for="descipcion">Descripci&oacute;n</label>
-                    <textarea name="descipcion" id="descipcion" class="form-control" rows="3"></textarea>
+                    <label for="descripcion">Descripci&oacute;n</label>
+                    <textarea name="descripcion" id="descripcion" class="form-control" rows="3"></textarea>
                  </div>
 
                  <div class="form-group text-center">
